@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <nav className="site-nav">
       <ul>
-        <li className="logo"><Link to="/">Chris Brew</Link></li>
+        <li className="logo"><Link to="/">Kohee Shop</Link></li>
         <li><Link to="/" className="active">Home</Link></li>
         <li><Link to="/coffee">CoffeeShop</Link></li>
         <li><Link to="/pastries">Pastries</Link></li>
