@@ -17,7 +17,7 @@ export function CartProvider({ children }) {
 
   const fetchCart = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/api/cart');
+      const res = await axios.get('http://https://chris-brew-kohee-shop.vercel.app/api/cart');
       setItems(res.data);
     } catch (err) {
       // if unauthorized, clear cart and redirect to login
@@ -30,7 +30,7 @@ export function CartProvider({ children }) {
 
   const addToCart = async (productId, quantity = 1) => {
     try {
-      await axios.post('http://localhost:4000/api/cart', { productId, quantity });
+      await axios.post('http://https://chris-brew-kohee-shop.vercel.app/api/cart', { productId, quantity });
       await fetchCart();
     } catch (err) {
       if (err.response?.status === 401) navigate('/login');
@@ -40,7 +40,7 @@ export function CartProvider({ children }) {
 
   const removeFromCart = async (productId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/cart/${productId}`);
+      await axios.delete(`http://https://chris-brew-kohee-shop.vercel.app/api/cart/${productId}`);
       await fetchCart();
     } catch (err) {
       if (err.response?.status === 401) navigate('/login');
