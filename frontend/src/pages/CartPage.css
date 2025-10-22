@@ -1,0 +1,60 @@
+.cart-page {
+  /* Make the background cover the entire viewport and sit behind content */
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.cart-panel {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  max-width: 900px;
+  margin: 120px auto 32px; /* push the panel lower on the page */
+  border-radius: 8px;
+  position: relative;
+  z-index: 1; /* ensure the panel sits above the fixed background */
+}
+
+@media (max-width: 600px) {
+  .cart-panel {
+    margin: 80px 16px 24px; /* less top margin on small screens */
+  }
+}
+
+/* background controls removed; background is hard-coded to public/uploads/cartbg.svg */
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.cart-item-left {
+  display: flex;
+  align-items: center;
+}
+.cart-item-image {
+  width: 84px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+.cart-item-controls {
+  text-align: right;
+  min-width: 240px;
+}
+.qty-input {
+  width: 56px;
+  margin: 0 8px;
+}

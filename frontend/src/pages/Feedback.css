@@ -1,0 +1,126 @@
+/* Scoped feedback styles (prefixed with .feedback-page) */
+:root {
+  --bg: #f7f7f7;
+  --card: #fff;
+  --accent: #6b4c3b;
+  --muted: #666;
+  --danger: #c0392b;
+}
+.feedback-page * {
+  box-sizing: border-box;
+}
+.feedback-page {
+  font-family: Segoe UI, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: #222;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* center vertically */
+  justify-content: center; /* center horizontally */
+}
+.feedback-page .container {
+  max-width: 720px;
+  margin: 0; /* handled by flexbox parent */
+  background: var(--card);
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(6vh); /* nudge slightly lower than exact center */
+}
+.feedback-page h1 {
+  margin-top: 0;
+  color: var(--accent);
+}
+.feedback-page .lead {
+  color: var(--muted);
+  margin-top: 4px;
+}
+.feedback-page form .row {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.feedback-page form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.feedback-page input[type="text"],
+.feedback-page input[type="email"],
+.feedback-page select,
+.feedback-page textarea {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+.feedback-page input:focus,
+.feedback-page select:focus,
+.feedback-page textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(107, 76, 59, 0.08);
+}
+.feedback-page .error {
+  color: var(--danger);
+  font-size: 13px;
+  height: 16px;
+  margin-top: 6px;
+}
+.feedback-page .checkbox-row {
+  flex-direction: row;
+  align-items: center;
+}
+.feedback-page .checkbox-row input[type="checkbox"] {
+  margin-right: 10px;
+}
+.feedback-page .actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+.feedback-page button {
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.feedback-page button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid #ddd;
+}
+.feedback-page .hidden {
+  display: none;
+}
+.feedback-page #success {
+  padding: 18px;
+  text-align: left;
+}
+.feedback-page .toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.feedback-page .modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 10000;
+}
+
+@media (max-width: 520px) {
+  .feedback-page {
+    padding: 18px;
+  }
+  .feedback-page .container {
+    padding: 18px;
+    transform: translateY(3vh);
+  }
+}

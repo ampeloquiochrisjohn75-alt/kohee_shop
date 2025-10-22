@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+header.home-header {
+  /* background-image is set inline from React to avoid webpack resolving issues
+     Place image in public/uploads/header.jpg */
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  z-index: 2;
+}
+
+.logo {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+.header-content {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  margin-top: 30vh;
+  margin-left: 10vh;
+  font-size: 30px;
+}
+
+.header-content h3 {
+  color: burlywood;
+}
+
+.header-content h6 {
+  color: burlywood;
+}
+
+.header-content button {
+  background-color: transparent;
+  padding: 20px;
+  margin-top: 20px;
+  border: solid white 2px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+}
+
+.header-content a {
+  color: white;
+}
+.header-content button:hover {
+  background-color: burlywood;
+  color: black;
+  border: solid black 2px;
+  border-radius: 10px;
+}

@@ -1,0 +1,54 @@
+/* Signup page centered card over header background */
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-family: Segoe UI, system-ui, Arial, sans-serif;
+}
+.signup-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-width: 420px;
+  width: 100%;
+  transform: translateY(6vh);
+}
+.signup-card h2 {
+  margin-top: 0;
+  color: #6b4c3b;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.signup-form input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+.signup-form input:focus {
+  border-color: #6b4c3b;
+  box-shadow: 0 0 0 3px rgba(107, 76, 59, 0.08);
+}
+.signup-form .primary {
+  background: #6b4c3b;
+  color: white;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (max-width: 520px) {
+  .signup-page {
+    padding: 18px;
+  }
+  .signup-card {
+    padding: 18px;
+    transform: translateY(3vh);
+  }
+}

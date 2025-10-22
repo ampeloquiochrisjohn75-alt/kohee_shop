@@ -1,0 +1,105 @@
+/* Scoped styles for the Coffee Menu page, adapted from provided shop.css */
+.shop-page * {
+  box-sizing: border-box;
+}
+.shop-page {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure the page and root fill the viewport so the background covers full page */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.shop-page {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Use a local SVG in src/pages so the build can resolve it */
+  background-image: url("./menubg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.shop-page .menu-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  margin-top: 18vh;
+  padding: 0 16px 40px;
+}
+.shop-page .menu-h1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 10vh;
+  width: 100%;
+  color: white;
+  text-decoration: underline burlywood 5px;
+  font-size: 50px;
+}
+
+.shop-page .card {
+  height: 50vh;
+  width: 40vh;
+  border-radius: 10px;
+  margin: 2vh;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 8px;
+}
+
+.shop-page .card-image img {
+  transition: 0.5s ease;
+  border-radius: 10px;
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.664);
+}
+
+.shop-page .card-image img:hover {
+  transform: scale(1.05);
+}
+
+.shop-page .coffee-title {
+  display: flex;
+  justify-content: space-between;
+}
+.shop-page .coffee-title h2 {
+  color: maroon;
+  margin-top: 1vh;
+  font-size: 25px;
+  font-weight: 200;
+}
+.shop-page .coffee-title h3 {
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1vh;
+  font-size: 25px;
+}
+
+.shop-page .card-body p {
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.85);
+}
+.shop-page .card-body button {
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  background-color: rgba(128, 0, 0, 0.541);
+  color: white;
+  cursor: pointer;
+}
+
+.shop-page .card-body .add-to-cart {
+  background-color: #8b4513;
+  margin-left: 10px;
+}
+
+/* cart panel and badge styles kept global via NavBar or separate file if needed */
