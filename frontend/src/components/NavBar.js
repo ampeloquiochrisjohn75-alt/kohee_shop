@@ -21,7 +21,7 @@ export default function NavBar() {
       <ul>
         {isAuthenticated && <li><Link to="/cart">Cart ({count})</Link></li>}
         {isAuthenticated && <li><Link to="/profile">Profile</Link></li>}
-        <li>{isAuthenticated ? <Link to="/logout">Logout</Link> : <><Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link></>}</li>
+        {/* <li>{isAuthenticated ? <Link to="/logout">Logout</Link> : <><Link to="/login">Login</Link> | <Link to="/signup">Sign Up</Link></>}</li> */}
       </ul>
     </nav>
   );
