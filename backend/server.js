@@ -1,32 +1,19 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2/promise');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { getDb } = require('./config/db');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.get("/", (req, res) => {
-  res.send("Hello from backend!");
-});
-
-
 
 const JWT_SECRET = process.env.JWT_SECRET || 'dev_secret_change_me';
 
-async function getDb() {
-  const conn = await mysql.createConnection({
-    host: process.env.DB_HOST || '127.0.0.1',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASS || '',
-    database: process.env.DB_NAME || 'kohee_shop'
-  });
-  return conn;
-}
+// database connection moved to ./config/db.js
 
 // Auth: signup
 app.post('/api/signup', async (req, res) => {
@@ -182,4 +169,3 @@ app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api/')) return next(); // skip API routes
   res.sendFile(path.join(buildPath, 'index.html'));
 });
-

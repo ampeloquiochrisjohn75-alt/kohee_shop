@@ -18,13 +18,13 @@ export function AuthProvider({ children }) {
   }, [token]);
 
   const login = async (email, password) => {
-    const res = await axios.post('http://https://chris-brew-kohee-shop.vercel.app/api/login', { email, password });
+    const res = await axios.post('http://localhost:4000/api/login', { email, password });
     setToken(res.data.token);
     return res.data;
   };
 
   const signup = async (name, email, password) => {
-    const res = await axios.post('http://https://chris-brew-kohee-shop.vercel.app/api/signup', { name, email, password });
+    const res = await axios.post('http://localhost:4000/api/signup', { name, email, password });
     setToken(res.data.token);
     return res.data;
   };
