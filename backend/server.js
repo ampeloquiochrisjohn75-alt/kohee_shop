@@ -10,6 +10,11 @@ const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.get("/", (req, res) => {
+  res.send("Hello from backend!");
+});
+
+
 
 const JWT_SECRET = process.env.JWT_SECRET || 'dev_secret_change_me';
 
@@ -177,3 +182,5 @@ app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api/')) return next(); // skip API routes
   res.sendFile(path.join(buildPath, 'index.html'));
 });
+
+module.exports = app;
