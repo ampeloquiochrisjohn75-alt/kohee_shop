@@ -9,7 +9,7 @@ export default function Home(){
       <div className="header-content">
         <h3>Welcome</h3>
         <h1>
-          Chris Brew, Where Every Sip <br />
+          Kohee Shop, Where Every Sip <br />
           Feels Like Home
         </h1>
         <h6>brewed with love and care</h6>
